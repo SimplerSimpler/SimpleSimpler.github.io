@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メッセージ切り替え</title>
+    <style>
+        /* CSSをインラインで記述 */
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #message {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+        .red-text {
+            color: red;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message">おはようございます</div>
+    <button id="changeBtn">ボタンを押す</button>
+
+    <script>
+        // JavaScriptをインラインで記述
+        const btn = document.getElementById('changeBtn');
+        const msg = document.getElementById('message');
+
+        btn.addEventListener('click', () => {
+            // 文字を書き換え
+            msg.innerText = 'おやすみなさい';
+            // CSSクラスを追加して赤字にする
+            msg.classList.add('red-text');
+        });
+    </script>
+
+</body>
+</html>
